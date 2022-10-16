@@ -234,7 +234,7 @@ async function articlesPrinting() {
 				<img class="_${decls[DECLS.indexOf("image-in-card-of-article")]}" src="./assets/articles/${articles[i].uuid}/cover.png" onerror="this.remove();" />
 				<div class="_${decls[DECLS.indexOf("textBox-in-card-of-article")]}">
 					<span class="_${decls[DECLS.indexOf("title-in-textBox-in-card-of-article")]}">${article.title}</span>
-					<span class="_${decls[DECLS.indexOf("para-in-textBox-in-card-of-article")]}">${article.para}</span>
+					<span class="_${decls[DECLS.indexOf("para-in-textBox-in-card-of-article")]}">${article.para.replace(/<img.+>/, " ").split(".", 5).join(".")}...</span>
 					<span class="_${decls[DECLS.indexOf("timeStamp-in-textBox-in-card-of-article")]}">${new Date(article.timeStamp).toLocaleDateString()}</span>
 				</div>
 			</div>
