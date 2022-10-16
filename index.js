@@ -161,7 +161,7 @@ var decls = [];
 const DECLS = ["wrapper", "header", "nav", "brand", "logo", "caller-of-menuFlyOut-of-config", "favicon-of-caller-of-menuFlyOut-of-config", "calling-of-menuFlyOut-of-config", "menuFlyOut-of-config", "main", "menuFlyOut", "group-in-menuFlyOut", "radioButton", "switchButton", "button", "wrappingButton", "favicon-in-button", "interaction-caller", "interaction-calling", "theme-changeTo", "favicon-of-theme-changeTo", "theme-changeTo-auto", "favicon-of-theme-changeTo-auto", "theme-changeTo-light", "favicon-of-theme-changeTo-light", "theme-changeTo-dark", "favicon-of-theme-changeTo-dark", "theme-changeTo-night", "favicon-of-theme-changeTo-night", "theme-switcher", "theme-switcher-contrast", "favicon-of-theme-switcher-contrast", "acrylic", "top-image", "left-in-main", "center-in-main", "right-in-main", "card-of-article", "image-in-card-of-article", "textBox-in-card-of-article", "title-in-textBox-in-card-of-article", "para-in-textBox-in-card-of-article", "timeStamp-in-textBox-in-card-of-article"];
 
 const THEME = {
-	"light": {"accentColor": "", "basicForegroundColor": "26, 26, 26, 1", "basicActiveForegroundColor": "45, 45, 45, 1", "discForegroundColor": "83, 83, 83, 1", "discActiveForegroundColor": "143, 143, 143, 1", "miscForegroundColor": "165, 165, 165, 1", "UNUSED": "172, 172, 172, 1", "basicBackgroundColor": "243, 243, 243, 1", "contentBackgroundColor": "249, 249, 249, 1", "layerCoverColor": "253, 253, 253, 1", "buttonBackgroundColor": "251, 251, 251, 1", "borderColor": "0, 0, 0, .15", "AcrylicBorderColor": "0, 0, 0, .15", "AcrylicBrushBlurAmount": "30", "AcrylicBrushTintLuminosityOpacity": "2.5", "AcrylicBrushTintColor": "255, 255, 255, 1", "AcrylicBrushTintOpacity": ".8", "AcrylicBrushNoiseOpacity": ".5", "buttonHoverColor": "0, 0, 0, .02352", "buttonActiveColor": "0, 0, 0, .03529", "buttonFaviconColor": "83, 83, 83, 1", "menuSeparatorColor": "0, 0, 0, .05882", "scrollbarColor": "241, 241, 241, 1", "scrollbarThumbColor": "193, 193, 193, 1", "scrollbarThumbHoverColor": "168, 168, 168, 1", "scrollbarThumbActiveColor": "120, 120, 120, 1", "scrollbarButtonColor": "163, 163, 163, 1"},
+	"light": {"accentColor": "", "basicForegroundColor": "26, 26, 26, 1", "basicActiveForegroundColor": "45, 45, 45, 1", "discForegroundColor": "83, 83, 83, 1", "discActiveForegroundColor": "143, 143, 143, 1", "miscForegroundColor": "165, 165, 165, 1", "UNUSED": "172, 172, 172, 1", "basicBackgroundColor": "243, 243, 243, 1", "contentBackgroundColor": "249, 249, 249, 1", "layerCoverColor": "253, 253, 253, 1", "buttonBackgroundColor": "251, 251, 251, 1", "borderColor": "0, 0, 0, .15", "AcrylicBorderColor": "0, 0, 0, .15", "AcrylicBrushBlurAmount": "30", "AcrylicBrushTintLuminosityOpacity": "2.5", "AcrylicBrushTintColor": "255, 255, 255, 1", "AcrylicBrushTintOpacity": ".8", "AcrylicBrushNoiseOpacity": ".5", "buttonHoverColor": "0, 0, 0, .02352", "buttonActiveColor": "0, 0, 0, .03529", "buttonFaviconColor": "83, 83, 83, 1", "menuSeparatorColor": "0, 0, 0, .05882", "scrollbarColor": "233, 233, 233, 1", "scrollbarThumbColor": "193, 193, 193, 1", "scrollbarThumbHoverColor": "168, 168, 168, 1", "scrollbarThumbActiveColor": "120, 120, 120, 1", "scrollbarButtonColor": "163, 163, 163, 1"},
 	"dark": {"accentColor": "", "basicForegroundColor": "255, 255, 255, 1", "basicActiveForegroundColor": "234, 234, 234, 1", "discForegroundColor": "215, 215, 215, 1", "discActiveForegroundColor": "197, 197, 197, 1", "miscForegroundColor": "102, 102, 102, 1", "UNUSED": "94, 94, 94, 1", "basicBackgroundColor": "32, 32, 32, 1", "contentBackgroundColor": "39, 39, 39, 1", "layerCoverColor": "50, 50, 50, 1", "buttonBackgroundColor": "45, 45, 45, 1", "borderColor": "255, 255, 255, .15", "AcrylicBorderColor": "0, 0, 0, .15", "AcrylicBrushBlurAmount": "30", "AcrylicBrushTintLuminosityOpacity": "2.5", "AcrylicBrushTintColor": "0, 0, 0, 1", "AcrylicBrushTintOpacity": ".8", "AcrylicBrushNoiseOpacity": ".5", "buttonHoverColor": "255, 255, 255, .03921", "buttonActiveColor": "255, 255, 255, .05882", "buttonFaviconColor": "207, 207, 207, 1", "menuSeparatorColor": "255, 255, 255, .15686", "scrollbarColor": "66, 66, 66, 1", "scrollbarThumbColor": "104, 104, 104, 1", "scrollbarThumbHoverColor": "123, 123, 123, 1", "scrollbarThumbActiveColor": "161, 161, 161, 1", "scrollbarButtonColor": "128, 128, 128, 1"},
 	"night": {"accentColor": "", "basicForegroundColor": "230, 230, 230, 1", "basicActiveForegroundColor": "211, 211, 211, 1", "discForegroundColor": "194, 194, 194, 1", "discActiveForegroundColor": "178, 178, 178, 1", "miscForegroundColor": "86, 86, 86, 1", "UNUSED": "78, 78, 78, 1", "basicBackgroundColor": "16, 16, 16, 1", "contentBackgroundColor": "23, 23, 23, 1", "layerCoverColor": "34, 34, 34, 1", "buttonBackgroundColor": "29, 29, 29, 1", "borderColor": "255, 255, 255, .15", "AcrylicBorderColor": "0, 0, 0, .15", "AcrylicBrushBlurAmount": "30", "AcrylicBrushTintLuminosityOpacity": "2.5", "AcrylicBrushTintColor": "0, 0, 0, 1", "AcrylicBrushTintOpacity": ".8", "AcrylicBrushNoiseOpacity": ".5", "buttonHoverColor": "255, 255, 255, .03921", "buttonActiveColor": "255, 255, 255, .05882", "buttonFaviconColor": "191, 191, 191, 1", "menuSeparatorColor": "255, 255, 255, .15686", "scrollbarColor": "50, 50, 50, 1", "scrollbarThumbColor": "88, 88, 88, 1", "scrollbarThumbHoverColor": "107, 107, 107, 1", "scrollbarThumbActiveColor": "145, 145, 145, 1", "scrollbarButtonColor": "116, 116, 116, 1"},
 	"lightContrast": {},
@@ -193,7 +193,7 @@ function coloring() {
 	document.styleSheets[1].insertRule(`::-webkit-scrollbar-thumb:hover { background-color: rgba(${THEME[__status__.theme].scrollbarThumbHoverColor}); }`, document.styleSheets[1].cssRules.length);
 	document.styleSheets[1].insertRule(`::-webkit-scrollbar-thumb:active { background-color: rgba(${THEME[__status__.theme].scrollbarThumbActiveColor}); }`, document.styleSheets[1].cssRules.length);
 	document.styleSheets[1].insertRule(`* { color: rgba(${THEME[__status__.theme].basicForegroundColor}); }`, document.styleSheets[1].cssRules.length);
-	document.styleSheets[1].insertRule(`body { background-color: rgba(${THEME[__status__.theme].basicBackgroundColor}); }`, document.styleSheets[1].cssRules.length);
+	document.styleSheets[1].insertRule(`body { background-color: rgba(${THEME[__status__.theme].contentBackgroundColor}); }`, document.styleSheets[1].cssRules.length);
 	document.styleSheets[1].insertRule(`._${decls[DECLS.indexOf("button")]}:hover { background-color: rgba(${THEME[__status__.theme].buttonHoverColor}); }`, document.styleSheets[1].cssRules.length);
 	document.styleSheets[1].insertRule(`._${decls[DECLS.indexOf("button")]}:active { background-color: rgba(${THEME[__status__.theme].buttonActiveColor}); }`, document.styleSheets[1].cssRules.length);
 	document.styleSheets[1].insertRule(`._${decls[DECLS.indexOf("button")]}::after { color: rgba(${THEME[__status__.theme].discForegroundColor}); }`, document.styleSheets[1].cssRules.length);
@@ -223,7 +223,6 @@ async function articlesPrinting() {
 	__status__.articlesPrintingTarget = (articles.length > __status__.articlesPrinted + config.articlesPrintPerTime) ? (__status__.articlesPrinted + config.articlesPrintPerTime) : articles.length;
 	var tmp = "";
 	var article = {};
-	// var img = new Image();
 	for (let i = __status__.articlesPrinted; i < __status__.articlesPrintingTarget; i++) {
 		console.log(i);
 		await fetch(`./assets/articles/${articles[i].uuid}/index.json`)
@@ -241,15 +240,8 @@ async function articlesPrinting() {
 		`
 	};
 	document.getElementById(`_${decls[DECLS.indexOf("center-in-main")]}`).innerHTML += tmp;
-	// for (let i = __status__.articlesPrinted; i < __status__.articlesPrintingTarget; i++) {
-		// img = new Image();
-		// img.src = `./assets/articles/${articles[i].uuid}/cover.png`;
-		// img.onerror = () => {document.getElementById(`_${articles[i].uuid}`).firstElementChild.remove();}
-		// console.log(img);
-	// };
 	tmp = undefined;
 	article = undefined;
-	// img = undefined;
 	__status__.articlesPrinted = __status__.articlesPrintingTarget;
 	__status__.articlesPrinting === false;
 };
