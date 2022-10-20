@@ -145,8 +145,8 @@ function themeChangeTo() {
 					detectThemeContrast()
 					switch (config.theme) {
 						case "night":
-							document.styleSheets[11].insertRule(`#_${decls[DECLS.indexOf("theme-switch-contrast")]}::before { color: rgba(${THEME[__status__.theme].basicActiveForegroundColor}); }`, document.styleSheets[11].cssRules.length);
-							document.styleSheets[11].insertRule(`._${decls[DECLS.indexOf("theme-switch-contrast")]}::after { color: rgba(${THEME[__status__.theme].discActiveForegroundColor}); }`, document.styleSheets[11].cssRules.length);
+							document.styleSheets[11].insertRule(`#_${decls[DECLS.indexOf("theme-switch-contrast")]}::before { color: rgba(${THEME[__status__.theme].basicForegroundActiveColor}); }`, document.styleSheets[11].cssRules.length);
+							document.styleSheets[11].insertRule(`._${decls[DECLS.indexOf("theme-switch-contrast")]}::after { color: rgba(${THEME[__status__.theme].discForegroundActiveColor}); }`, document.styleSheets[11].cssRules.length);
 							document.styleSheets[11].insertRule(`#_${decls[DECLS.indexOf("theme-switch-contrast")]} { pointer-events: none; }`, document.styleSheets[11].cssRules.length);
 							break;
 					};
@@ -158,12 +158,12 @@ function themeChangeTo() {
 };
 
 var decls = [];
-const DECLS = ["wrapper", "header", "nav", "brand", "logo", "caller-of-menuFlyOut-of-config", "favicon-of-caller-of-menuFlyOut-of-config", "calling-of-menuFlyOut-of-config", "menuFlyOut-of-config", "main", "menuFlyOut", "group-in-menuFlyOut", "radioButton", "switchButton", "button", "wrappingButton", "favicon-in-button", "interaction-caller", "interaction-calling", "theme-changeTo", "favicon-of-theme-changeTo", "theme-changeTo-auto", "favicon-of-theme-changeTo-auto", "theme-changeTo-light", "favicon-of-theme-changeTo-light", "theme-changeTo-dark", "favicon-of-theme-changeTo-dark", "theme-changeTo-night", "favicon-of-theme-changeTo-night", "theme-switcher", "theme-switcher-contrast", "favicon-of-theme-switcher-contrast", "acrylic", "top-image", "left-in-main", "center-in-main", "right-in-main", "card-of-article", "image-in-card-of-article", "textBox-in-card-of-article", "title-in-textBox-in-card-of-article", "para-in-textBox-in-card-of-article", "timeStamp-in-textBox-in-card-of-article"];
+const DECLS = ["wrapper", "header", "nav", "brand", "logo", "caller-of-menuFlyOut-of-config", "favicon-of-caller-of-menuFlyOut-of-config", "calling-of-menuFlyOut-of-config", "menuFlyOut-of-config", "main", "menuFlyOut", "group-in-menuFlyOut", "radioButton", "switchButton", "button", "hyperlinkButton", "wrappingButton", "favicon-in-button", "interaction-caller", "interaction-calling", "theme-changeTo", "favicon-of-theme-changeTo", "theme-changeTo-auto", "favicon-of-theme-changeTo-auto", "theme-changeTo-light", "favicon-of-theme-changeTo-light", "theme-changeTo-dark", "favicon-of-theme-changeTo-dark", "theme-changeTo-night", "favicon-of-theme-changeTo-night", "theme-switcher", "theme-switcher-contrast", "favicon-of-theme-switcher-contrast", "acrylic", "top-image", "left-in-main", "center-in-main", "right-in-main", "card-of-article", "image-in-card-of-article", "title-in-card-of-article", "content-in-card-of-article", "link-in-card-of-article", "info-in-card-of-article", "author-in-info-in-card-of-article", "timeStamp-in-info-in-card-of-article"];
 
 const THEME = {
-	"light": {"accentColor": "", "basicForegroundColor": "26, 26, 26, 1", "basicActiveForegroundColor": "45, 45, 45, 1", "discForegroundColor": "83, 83, 83, 1", "discActiveForegroundColor": "143, 143, 143, 1", "miscForegroundColor": "165, 165, 165, 1", "UNUSED": "172, 172, 172, 1", "basicBackgroundColor": "243, 243, 243, 1", "contentBackgroundColor": "249, 249, 249, 1", "layerCoverColor": "253, 253, 253, 1", "buttonBackgroundColor": "251, 251, 251, 1", "borderColor": "0, 0, 0, .15", "AcrylicBorderColor": "0, 0, 0, .15", "AcrylicBrushBlurAmount": "30", "AcrylicBrushTintLuminosityOpacity": "2.5", "AcrylicBrushTintColor": "255, 255, 255, 1", "AcrylicBrushTintOpacity": ".8", "AcrylicBrushNoiseOpacity": ".5", "buttonHoverColor": "0, 0, 0, .02352", "buttonActiveColor": "0, 0, 0, .03529", "buttonFaviconColor": "83, 83, 83, 1", "menuSeparatorColor": "0, 0, 0, .05882", "scrollbarColor": "233, 233, 233, 1", "scrollbarThumbColor": "193, 193, 193, 1", "scrollbarThumbHoverColor": "168, 168, 168, 1", "scrollbarThumbActiveColor": "120, 120, 120, 1", "scrollbarButtonColor": "163, 163, 163, 1"},
-	"dark": {"accentColor": "", "basicForegroundColor": "255, 255, 255, 1", "basicActiveForegroundColor": "234, 234, 234, 1", "discForegroundColor": "215, 215, 215, 1", "discActiveForegroundColor": "197, 197, 197, 1", "miscForegroundColor": "102, 102, 102, 1", "UNUSED": "94, 94, 94, 1", "basicBackgroundColor": "32, 32, 32, 1", "contentBackgroundColor": "39, 39, 39, 1", "layerCoverColor": "50, 50, 50, 1", "buttonBackgroundColor": "45, 45, 45, 1", "borderColor": "255, 255, 255, .15", "AcrylicBorderColor": "0, 0, 0, .15", "AcrylicBrushBlurAmount": "30", "AcrylicBrushTintLuminosityOpacity": "2.5", "AcrylicBrushTintColor": "0, 0, 0, 1", "AcrylicBrushTintOpacity": ".8", "AcrylicBrushNoiseOpacity": ".5", "buttonHoverColor": "255, 255, 255, .03921", "buttonActiveColor": "255, 255, 255, .05882", "buttonFaviconColor": "207, 207, 207, 1", "menuSeparatorColor": "255, 255, 255, .15686", "scrollbarColor": "66, 66, 66, 1", "scrollbarThumbColor": "104, 104, 104, 1", "scrollbarThumbHoverColor": "123, 123, 123, 1", "scrollbarThumbActiveColor": "161, 161, 161, 1", "scrollbarButtonColor": "128, 128, 128, 1"},
-	"night": {"accentColor": "", "basicForegroundColor": "230, 230, 230, 1", "basicActiveForegroundColor": "211, 211, 211, 1", "discForegroundColor": "194, 194, 194, 1", "discActiveForegroundColor": "178, 178, 178, 1", "miscForegroundColor": "86, 86, 86, 1", "UNUSED": "78, 78, 78, 1", "basicBackgroundColor": "16, 16, 16, 1", "contentBackgroundColor": "23, 23, 23, 1", "layerCoverColor": "34, 34, 34, 1", "buttonBackgroundColor": "29, 29, 29, 1", "borderColor": "255, 255, 255, .15", "AcrylicBorderColor": "0, 0, 0, .15", "AcrylicBrushBlurAmount": "30", "AcrylicBrushTintLuminosityOpacity": "2.5", "AcrylicBrushTintColor": "0, 0, 0, 1", "AcrylicBrushTintOpacity": ".8", "AcrylicBrushNoiseOpacity": ".5", "buttonHoverColor": "255, 255, 255, .03921", "buttonActiveColor": "255, 255, 255, .05882", "buttonFaviconColor": "191, 191, 191, 1", "menuSeparatorColor": "255, 255, 255, .15686", "scrollbarColor": "50, 50, 50, 1", "scrollbarThumbColor": "88, 88, 88, 1", "scrollbarThumbHoverColor": "107, 107, 107, 1", "scrollbarThumbActiveColor": "145, 145, 145, 1", "scrollbarButtonColor": "116, 116, 116, 1"},
+	"light": {"absoluteColor": "255, 255, 255, 1", "absoluteInvertedColor": "0, 0, 0, 1", "basicForegroundColor": "26, 26, 26, 1", "basicForegroundActiveColor": "26, 26, 26, .8", "discForegroundColor": "60.35, 60.35, 60.35, 1", "discForegroundActiveColor": "60.35, 60.35, 60.35, .8", "miscForegroundColor": "165, 165, 165, 1", "basicBackgroundColor": "243, 243, 243, 1", "contentBackgroundColor": "249, 249, 249, 1", "layerCoverColor": "253, 253, 253, 1", "borderColor": "0, 0, 0, .15", "AcrylicBorderColor": "0, 0, 0, .15", "AcrylicBrushBlurAmount": "30", "AcrylicBrushTintLuminosityOpacity": "2.5", "AcrylicBrushTintColor": "255, 255, 255, 1", "AcrylicBrushTintOpacity": ".8", "AcrylicBrushNoiseOpacity": ".5", "buttonColor": "255, 255, 255, .58431", "buttonHoverColor": "255, 255, 255, .31372", "buttonActiveColor": "255, 255, 255, .25098", "buttonBorderColor": "0, 0, 0, .07450", "buttonBorderHoverColor": "0, 0, 0, .29411", "buttonBorderActiveColor": "0, 0, 0, .08627", "buttonForegroundActiveColor": "0, 0, 0, .61568", "wrappingButtonHoverColor": "0, 0, 0, .02352", "wrappingButtonActiveColor": "0, 0, 0, .03529", "buttonFaviconColor": "83, 83, 83, 1", "menuSeparatorColor": "0, 0, 0, .05882", "scrollbarColor": "233, 233, 233, 1", "scrollbarThumbColor": "193, 193, 193, 1", "scrollbarThumbHoverColor": "168, 168, 168, 1", "scrollbarThumbActiveColor": "120, 120, 120, 1", "scrollbarButtonColor": "163, 163, 163, 1"},
+	"dark": {"absoluteColor": "0, 0, 0, 1", "absoluteInvertedColor": "255, 255, 255, 1", "basicForegroundColor": "255, 255, 255, 1", "basicForegroundActiveColor": "255, 255, 255, .8", "discForegroundColor": "216.75, 216.75, 216.75, 1", "discForegroundActiveColor": "216.75, 216.75, 216.75, .8", "miscForegroundColor": "102, 102, 102, 1", "basicBackgroundColor": "32, 32, 32, 1", "contentBackgroundColor": "39, 39, 39, 1", "layerCoverColor": "50, 50, 50, 1", "borderColor": "255, 255, 255, .15", "AcrylicBorderColor": "0, 0, 0, .15", "AcrylicBrushBlurAmount": "30", "AcrylicBrushTintLuminosityOpacity": "2.5", "AcrylicBrushTintColor": "0, 0, 0, 1", "AcrylicBrushTintOpacity": ".8", "AcrylicBrushNoiseOpacity": ".5", "buttonColor": "255, 255, 255, .05098", "buttonHoverColor": "255, 255, 255, .10588", "buttonActiveColor": "255, 255, 255, .08627", "buttonBorderColor": "0, 0, 0, .29019", "buttonBorderHoverColor": "0, 0, 0, .39607", "buttonBorderActiveColor": "0, 0, 0, .27058", "buttonForegroundActiveColor": "255, 255, 255, .77647", "wrappingButtonHoverColor": "255, 255, 255, .03921", "wrappingButtonActiveColor": "255, 255, 255, .05882", "buttonFaviconColor": "207, 207, 207, 1", "menuSeparatorColor": "255, 255, 255, .15686", "scrollbarColor": "66, 66, 66, 1", "scrollbarThumbColor": "104, 104, 104, 1", "scrollbarThumbHoverColor": "123, 123, 123, 1", "scrollbarThumbActiveColor": "161, 161, 161, 1", "scrollbarButtonColor": "128, 128, 128, 1"},
+	"night": {"absoluteColor": "0, 0, 0, 1", "absoluteInvertedColor": "255, 255, 255, 1", "basicForegroundColor": "230, 230, 230, 1", "basicForegroundActiveColor": "230, 230, 230, .8", "discForegroundColor": "195.5, 195.5, 195.5, 1", "discForegroundActiveColor": "195.5, 195.5, 195.5, .8", "miscForegroundColor": "86, 86, 86, 1", "basicBackgroundColor": "16, 16, 16, 1", "contentBackgroundColor": "23, 23, 23, 1", "layerCoverColor": "34, 34, 34, 1", "borderColor": "255, 255, 255, .15", "AcrylicBorderColor": "0, 0, 0, .15", "AcrylicBrushBlurAmount": "30", "AcrylicBrushTintLuminosityOpacity": "2.5", "AcrylicBrushTintColor": "0, 0, 0, 1", "AcrylicBrushTintOpacity": ".8", "AcrylicBrushNoiseOpacity": ".5", "buttonColor": "255, 255, 255, .04705", "buttonHoverColor": "255, 255, 255, .09803", "buttonActiveColor": "255, 255, 255, .08235", "buttonBorderColor": "0, 0, 0, .42745", "buttonBorderHoverColor": "0, 0, 0, .53333", "buttonBorderActiveColor": "0, 0, 0, .37254", "buttonForegroundActiveColor": "255, 255, 255, .71764", "wrappingButtonHoverColor": "255, 255, 255, .03921", "wrappingButtonActiveColor": "255, 255, 255, .05882", "buttonFaviconColor": "191, 191, 191, 1", "menuSeparatorColor": "255, 255, 255, .15686", "scrollbarColor": "50, 50, 50, 1", "scrollbarThumbColor": "88, 88, 88, 1", "scrollbarThumbHoverColor": "107, 107, 107, 1", "scrollbarThumbActiveColor": "145, 145, 145, 1", "scrollbarButtonColor": "116, 116, 116, 1"},
 	"lightContrast": {},
 	"darkContrast": {}
 };
@@ -171,6 +171,8 @@ const THEME = {
 var config = {
 	"theme": "auto",
 	"themeContrast": false,
+	"accentColor": "127, 127, 127",
+	"accentAlpha": "0.9",
 	"articlesPrintPerTime": 10
 };
 
@@ -192,13 +194,17 @@ function coloring() {
 	document.styleSheets[1].insertRule(`::-webkit-scrollbar-thumb { background-color: rgba(${THEME[__status__.theme].scrollbarThumbColor}); }`, document.styleSheets[1].cssRules.length);
 	document.styleSheets[1].insertRule(`::-webkit-scrollbar-thumb:hover { background-color: rgba(${THEME[__status__.theme].scrollbarThumbHoverColor}); }`, document.styleSheets[1].cssRules.length);
 	document.styleSheets[1].insertRule(`::-webkit-scrollbar-thumb:active { background-color: rgba(${THEME[__status__.theme].scrollbarThumbActiveColor}); }`, document.styleSheets[1].cssRules.length);
+	document.styleSheets[1].insertRule(`::selection { color: white; background-color: rgba(${config.accentColor}, ${config.accentAlpha}); }`, document.styleSheets[1].cssRules.length);
 	document.styleSheets[1].insertRule(`* { color: rgba(${THEME[__status__.theme].basicForegroundColor}); }`, document.styleSheets[1].cssRules.length);
 	document.styleSheets[1].insertRule(`body { background-color: rgba(${THEME[__status__.theme].contentBackgroundColor}); }`, document.styleSheets[1].cssRules.length);
-	document.styleSheets[1].insertRule(`._${decls[DECLS.indexOf("button")]}:hover { background-color: rgba(${THEME[__status__.theme].buttonHoverColor}); }`, document.styleSheets[1].cssRules.length);
-	document.styleSheets[1].insertRule(`._${decls[DECLS.indexOf("button")]}:active { background-color: rgba(${THEME[__status__.theme].buttonActiveColor}); }`, document.styleSheets[1].cssRules.length);
-	document.styleSheets[1].insertRule(`._${decls[DECLS.indexOf("button")]}::after { color: rgba(${THEME[__status__.theme].discForegroundColor}); }`, document.styleSheets[1].cssRules.length);
-	document.styleSheets[1].insertRule(`._${decls[DECLS.indexOf("button")]}:active::before { color: rgba(${THEME[__status__.theme].basicActiveForegroundColor}); }`, document.styleSheets[1].cssRules.length);
-	document.styleSheets[1].insertRule(`._${decls[DECLS.indexOf("button")]}:active::after { color: rgba(${THEME[__status__.theme].discActiveForegroundColor}); }`, document.styleSheets[1].cssRules.length);
+	document.styleSheets[1].insertRule(`._${decls[DECLS.indexOf("button")]} { background-color: rgba(${THEME[__status__.theme].buttonColor}); box-shadow: rgba(${THEME[__status__.theme].buttonBorderColor}) 0 0 0 1px inset; }`, document.styleSheets[1].cssRules.length);
+	document.styleSheets[1].insertRule(`._${decls[DECLS.indexOf("button")]}:hover { background-color: rgba(${THEME[__status__.theme].buttonHoverColor}); box-shadow: rgba(${THEME[__status__.theme].buttonBorderHoverColor}) 0 0 0 1px inset; }`, document.styleSheets[1].cssRules.length);
+	document.styleSheets[1].insertRule(`._${decls[DECLS.indexOf("button")]}:active { background-color: rgba(${THEME[__status__.theme].buttonActiveColor}); box-shadow: rgba(${THEME[__status__.theme].buttonBorderActiveColor}) 0 0 0 1px inset; color: rgba(${THEME[__status__.theme].buttonForegroundActiveColor}); }`, document.styleSheets[1].cssRules.length);
+	document.styleSheets[1].insertRule(`._${decls[DECLS.indexOf("wrappingButton")]}:hover { background-color: rgba(${THEME[__status__.theme].wrappingButtonHoverColor}); }`, document.styleSheets[1].cssRules.length);
+	document.styleSheets[1].insertRule(`._${decls[DECLS.indexOf("wrappingButton")]}:active { background-color: rgba(${THEME[__status__.theme].wrappingButtonActiveColor}); }`, document.styleSheets[1].cssRules.length);
+	document.styleSheets[1].insertRule(`._${decls[DECLS.indexOf("wrappingButton")]}::after { color: rgba(${THEME[__status__.theme].discForegroundColor}); }`, document.styleSheets[1].cssRules.length);
+	document.styleSheets[1].insertRule(`._${decls[DECLS.indexOf("wrappingButton")]}:active::before { color: rgba(${THEME[__status__.theme].basicForegroundActiveColor}); }`, document.styleSheets[1].cssRules.length);
+	document.styleSheets[1].insertRule(`._${decls[DECLS.indexOf("wrappingButton")]}:active::after { color: rgba(${THEME[__status__.theme].discForegroundActiveColor}); }`, document.styleSheets[1].cssRules.length);
 	document.styleSheets[1].insertRule(`._${decls[DECLS.indexOf("group-in-menuFlyOut")]}:not(:last-of-type) { border-width: 0 0 1px 0; border-style: none none solid none; border-color: rgba(${THEME[__status__.theme].menuSeparatorColor}); }`, document.styleSheets[1].cssRules.length);
 	document.styleSheets[1].insertRule(`._${decls[DECLS.indexOf("acrylic")]} { box-shadow: rgba(${THEME[__status__.theme].AcrylicBorderColor}) 0 0 0 1px inset; backdrop-filter: blur(${THEME[__status__.theme].AcrylicBrushBlurAmount}px) brightness(${THEME[__status__.theme].AcrylicBrushTintLuminosityOpacity}); }`, document.styleSheets[1].cssRules.length);
 	document.styleSheets[1].insertRule(`._${decls[DECLS.indexOf("acrylic")]} > div::before { content: ""; position: absolute; top: 0; right: 0; bottom: 0; left: 0; opacity: ${THEME[__status__.theme].AcrylicBrushTintOpacity}; background-color: rgba(${THEME[__status__.theme].AcrylicBrushTintColor}); }`, document.styleSheets[1].cssRules.length);
@@ -206,8 +212,10 @@ function coloring() {
 		content: ""; position: absolute; top: 0; right: 0; bottom: 0; left: 0; opacity: ${THEME[__status__.theme].AcrylicBrushNoiseOpacity}; background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAAAUVBMVEWFhYWDg4N3d3dtbW17e3t1dXWBgYGHh4d5eXlzc3OLi4ubm5uVlZWPj4+NjY19fX2JiYl/f39ra2uRkZGZmZlpaWmXl5dvb29xcXGTk5NnZ2c8TV1mAAAAG3RSTlNAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEAvEOwtAAAFVklEQVR4XpWWB67c2BUFb3g557T/hRo9/WUMZHlgr4Bg8Z4qQgQJlHI4A8SzFVrapvmTF9O7dmYRFZ60YiBhJRCgh1FYhiLAmdvX0CzTOpNE77ME0Zty/nWWzchDtiqrmQDeuv3powQ5ta2eN0FY0InkqDD73lT9c9lEzwUNqgFHs9VQce3TVClFCQrSTfOiYkVJQBmpbq2L6iZavPnAPcoU0dSw0SUTqz/GtrGuXfbyyBniKykOWQWGqwwMA7QiYAxi+IlPdqo+hYHnUt5ZPfnsHJyNiDtnpJyayNBkF6cWoYGAMY92U2hXHF/C1M8uP/ZtYdiuj26UdAdQQSXQErwSOMzt/XWRWAz5GuSBIkwG1H3FabJ2OsUOUhGC6tK4EMtJO0ttC6IBD3kM0ve0tJwMdSfjZo+EEISaeTr9P3wYrGjXqyC1krcKdhMpxEnt5JetoulscpyzhXN5FRpuPHvbeQaKxFAEB6EN+cYN6xD7RYGpXpNndMmZgM5Dcs3YSNFDHUo2LGfZuukSWyUYirJAdYbF3MfqEKmjM+I2EfhA94iG3L7uKrR+GdWD73ydlIB+6hgref1QTlmgmbM3/LeX5GI1Ux1RWpgxpLuZ2+I+IjzZ8wqE4nilvQdkUdfhzI5QDWy+kw5Wgg2pGpeEVeCCA7b85BO3F9DzxB3cdqvBzWcmzbyMiqhzuYqtHRVG2y4x+KOlnyqla8AoWWpuBoYRxzXrfKuILl6SfiWCbjxoZJUaCBj1CjH7GIaDbc9kqBY3W/Rgjda1iqQcOJu2WW+76pZC9QG7M00dffe9hNnseupFL53r8F7YHSwJWUKP2q+k7RdsxyOB11n0xtOvnW4irMMFNV4H0uqwS5ExsmP9AxbDTc9JwgneAT5vTiUSm1E7BSflSt3bfa1tv8Di3R8n3Af7MNWzs49hmauE2wP+ttrq+AsWpFG2awvsuOqbipWHgtuvuaAE+A1Z/7gC9hesnr+7wqCwG8c5yAg3AL1fm8T9AZtp/bbJGwl1pNrE7RuOX7PeMRUERVaPpEs+yqeoSmuOlokqw49pgomjLeh7icHNlG19yjs6XXOMedYm5xH2YxpV2tc0Ro2jJfxC50ApuxGob7lMsxfTbeUv07TyYxpeLucEH1gNd4IKH2LAg5TdVhlCafZvpskfncCfx8pOhJzd76bJWeYFnFciwcYfubRc12Ip/ppIhA1/mSZ/RxjFDrJC5xifFjJpY2Xl5zXdguFqYyTR1zSp1Y9p+tktDYYSNflcxI0iyO4TPBdlRcpeqjK/piF5bklq77VSEaA+z8qmJTFzIWiitbnzR794USKBUaT0NTEsVjZqLaFVqJoPN9ODG70IPbfBHKK+/q/AWR0tJzYHRULOa4MP+W/HfGadZUbfw177G7j/OGbIs8TahLyynl4X4RinF793Oz+BU0saXtUHrVBFT/DnA3ctNPoGbs4hRIjTok8i+algT1lTHi4SxFvONKNrgQFAq2/gFnWMXgwffgYMJpiKYkmW3tTg3ZQ9Jq+f8XN+A5eeUKHWvJWJ2sgJ1Sop+wwhqFVijqWaJhwtD8MNlSBeWNNWTa5Z5kPZw5+LbVT99wqTdx29lMUH4OIG/D86ruKEauBjvH5xy6um/Sfj7ei6UUVk4AIl3MyD4MSSTOFgSwsH/QJWaQ5as7ZcmgBZkzjjU1UrQ74ci1gWBCSGHtuV1H2mhSnO3Wp/3fEV5a+4wz//6qy8JxjZsmxxy5+4w9CDNJY09T072iKG0EnOS0arEYgXqYnXcYHwjTtUNAcMelOd4xpkoqiTYICWFq0JSiPfPDQdnt+4/wuqcXY47QILbgAAAABJRU5ErkJggg==);
 	}`, document.styleSheets[1].cssRules.length);
 	document.styleSheets[1].insertRule(`._${decls[DECLS.indexOf("card-of-article")]} { box-shadow: rgba(${THEME[__status__.theme].borderColor}) 0 0 0 1px inset; }`, document.styleSheets[1].cssRules.length);
-	document.styleSheets[1].insertRule(`._${decls[DECLS.indexOf("timeStamp-in-textBox-in-card-of-article")]} { color: rgba(${THEME[__status__.theme].miscForegroundColor}); }`, document.styleSheets[1].cssRules.length);
-	document.styleSheets[1].insertRule(`#_${decls[DECLS.indexOf("logo")]} { box-shadow: 0 0 0 2px rgba(${THEME[__status__.theme].basicActiveForegroundColor}) inset; color: rgba(${THEME[__status__.theme].basicActiveForegroundColor}); }`, document.styleSheets[1].cssRules.length);
+	document.styleSheets[1].insertRule(`._${decls[DECLS.indexOf("title-in-card-of-article")]} a:active { color: rgba(${THEME[__status__.theme].basicForegroundActiveColor}); }`, document.styleSheets[1].cssRules.length);
+	document.styleSheets[1].insertRule(`._${decls[DECLS.indexOf("info-in-card-of-article")]} * { color: rgba(${THEME[__status__.theme].discForegroundColor}); }`, document.styleSheets[1].cssRules.length);
+	document.styleSheets[1].insertRule(`._${decls[DECLS.indexOf("info-in-card-of-article")]} a:active { color: rgba(${THEME[__status__.theme].discForegroundActiveColor}); }`, document.styleSheets[1].cssRules.length);
+	document.styleSheets[1].insertRule(`#_${decls[DECLS.indexOf("logo")]} { box-shadow: 0 0 0 2px rgba(${THEME[__status__.theme].basicForegroundActiveColor}) inset; color: rgba(${THEME[__status__.theme].basicForegroundActiveColor}); }`, document.styleSheets[1].cssRules.length);
 	document.styleSheets[1].insertRule(`#_${decls[DECLS.indexOf("top-image")]} { background: url() center / 100% no-repeat rgba(${THEME[__status__.theme].layerCoverColor}); }`, document.styleSheets[1].cssRules.length);
 	switch (__status__.initialized) {
 		case true:
@@ -225,16 +233,18 @@ async function articlesPrinting() {
 	var article = {};
 	for (let i = __status__.articlesPrinted; i < __status__.articlesPrintingTarget; i++) {
 		console.log(i);
-		await fetch(`./assets/articles/${articles[i].uuid}/index.json`)
+		await fetch(`./assets/articles/${articles[i]}/index.json`)
 			.then(response => response.json())
 			.then(data => article = data);
 		tmp += `
-			<div id="_${articles[i].uuid}" class="_${decls[DECLS.indexOf("card-of-article")]}">
-				<img class="_${decls[DECLS.indexOf("image-in-card-of-article")]}" src="./assets/articles/${articles[i].uuid}/cover.png" onerror="this.remove();" />
-				<div class="_${decls[DECLS.indexOf("textBox-in-card-of-article")]}">
-					<span class="_${decls[DECLS.indexOf("title-in-textBox-in-card-of-article")]}">${article.title}</span>
-					<span class="_${decls[DECLS.indexOf("para-in-textBox-in-card-of-article")]}">${article.para.replace(/<img.+>/, " ").split(".", 5).join(".")}...</span>
-					<span class="_${decls[DECLS.indexOf("timeStamp-in-textBox-in-card-of-article")]}">${new Date(article.timeStamp).toLocaleDateString()}</span>
+			<div id="_${articles[i]}" class="_${decls[DECLS.indexOf("card-of-article")]}">
+				<span class="_${decls[DECLS.indexOf("title-in-card-of-article")]}"><a>${article.title}</a></span>
+				<img class="_${decls[DECLS.indexOf("image-in-card-of-article")]}" src="./assets/articles/${articles[i]}/cover.png" onerror="this.remove();" />
+				<span class="_${decls[DECLS.indexOf("content-in-card-of-article")]}"><br />${article.content.replace(/<img.+>/, " ").split(".", 5).join(".")}.</span>
+				<span class="_${decls[DECLS.indexOf("link-in-card-of-article")]} _${decls[DECLS.indexOf("button")]}">&nbsp&nbsp&nbsp&nbspArticle&nbsppage&nbsp>&nbsp&nbsp&nbsp&nbsp</span>
+				<div class="_${decls[DECLS.indexOf("info-in-card-of-article")]}">
+					<span class="_${decls[DECLS.indexOf("author-in-info-in-card-of-article")]}"><a>${article.project}</a>&nbspBy&nbsp<a>${article.author}</a></span>
+					<span class="_${decls[DECLS.indexOf("timeStamp-in-info-in-card-of-article")]}">${new Date(article.timeStamp).toLocaleDateString()}</span>
 				</div>
 			</div>
 		`
@@ -243,7 +253,7 @@ async function articlesPrinting() {
 	tmp = undefined;
 	article = undefined;
 	__status__.articlesPrinted = __status__.articlesPrintingTarget;
-	__status__.articlesPrinting === false;
+	__status__.articlesPrinting = false;
 };
 
 function main() {
@@ -259,27 +269,30 @@ function main() {
 				break;
 		};
 	};
-	document.styleSheets[0].insertRule(`._${decls[DECLS.indexOf("button")]} { align-items: center; }`, document.styleSheets[0].cssRules.length);
+	document.styleSheets[0].insertRule(`._${decls[DECLS.indexOf("button")]}, ._${decls[DECLS.indexOf("hyperlinkButton")]}, ._${decls[DECLS.indexOf("wrappingButton")]} { align-items: center; }`, document.styleSheets[0].cssRules.length);
 	document.styleSheets[0].insertRule(`._${decls[DECLS.indexOf("favicon-in-button")]} { order: -1; pointer-events: none; }`, document.styleSheets[0].cssRules.length);
 	document.styleSheets[0].insertRule(`._${decls[DECLS.indexOf("wrappingButton")]} { width: calc(100% - 10px); height: 36px; margin: 2px 0; z-index: 1; }`, document.styleSheets[0].cssRules.length);
 	document.styleSheets[0].insertRule(`._${decls[DECLS.indexOf("wrappingButton")]}::before { flex: 1; }`, document.styleSheets[0].cssRules.length);
 	document.styleSheets[0].insertRule(`._${decls[DECLS.indexOf("wrappingButton")]}::after { margin: 0 40px 0 0; }`, document.styleSheets[0].cssRules.length);
 	document.styleSheets[0].insertRule(`._${decls[DECLS.indexOf("menuFlyOut")]} { flex-direction: column; }`, document.styleSheets[0].cssRules.length);
-	document.styleSheets[0].insertRule(`._${decls[DECLS.indexOf("group-in-menuFlyOut")]} { width: 100%; flex-direction: column; align-items: center; padding: 3px 0; z-index: 1; }`, document.styleSheets[0].cssRules.length);
-	document.styleSheets[0].insertRule(`._${decls[DECLS.indexOf("interaction-caller")]}, ._${decls[DECLS.indexOf("interaction-calling")]}, ._${decls[DECLS.indexOf("button")]} { border-radius: 5px; }`, document.styleSheets[0].cssRules.length);
+	document.styleSheets[0].insertRule(`._${decls[DECLS.indexOf("group-in-menuFlyOut")]} { width: 100%; padding: 3px 0; flex-direction: column; align-items: center; z-index: 1; }`, document.styleSheets[0].cssRules.length);
 	document.styleSheets[0].insertRule(`._${decls[DECLS.indexOf("interaction-calling")]} { display: none; position: absolute; height: 0; overflow-y: hidden; transition: cubic-bezier(0, 0, 0, 1) height .3s; }`, document.styleSheets[0].cssRules.length);
 	document.styleSheets[0].insertRule(`._${decls[DECLS.indexOf("acrylic")]} { box-shadow: 0 12px 20px rgba(0, 0, 0, .15); }`, document.styleSheets[0].cssRules.length);
 	document.styleSheets[0].insertRule(`._${decls[DECLS.indexOf("acrylic")]} > div { position: relative; width: 100%; }`, document.styleSheets[0].cssRules.length);
-	document.styleSheets[0].insertRule(`._${decls[DECLS.indexOf("card-of-article")]} { margin: 6px 0; flex-direction: column; border-radius: 5px; }`, document.styleSheets[0].cssRules.length);
-	document.styleSheets[0].insertRule(`._${decls[DECLS.indexOf("image-in-card-of-article")]} { border-radius: 5px 5px 0 0 ; }`, document.styleSheets[0].cssRules.length);
-	document.styleSheets[0].insertRule(`._${decls[DECLS.indexOf("textBox-in-card-of-article")]} { padding: 36px 36px; flex-direction: column; }`, document.styleSheets[0].cssRules.length);
-	document.styleSheets[0].insertRule(`._${decls[DECLS.indexOf("title-in-textBox-in-card-of-article")]} { font-size: 20px; font-weight: 600; }`, document.styleSheets[0].cssRules.length);
+	document.styleSheets[0].insertRule(`._${decls[DECLS.indexOf("card-of-article")]} { margin: 10px 0; padding: 0 2%; flex-direction: column; }`, document.styleSheets[0].cssRules.length);
+	document.styleSheets[0].insertRule(`._${decls[DECLS.indexOf("image-in-card-of-article")]} { width: 100%; }`, document.styleSheets[0].cssRules.length);
+	document.styleSheets[0].insertRule(`._${decls[DECLS.indexOf("title-in-card-of-article")]} *, ._${decls[DECLS.indexOf("content-in-card-of-article")]} { font-family: Georgia, 'Times New Roman', Times, serif; }`, document.styleSheets[0].cssRules.length);
+	document.styleSheets[0].insertRule(`._${decls[DECLS.indexOf("title-in-card-of-article")]} { padding: 20px 0; align-self: start; }`, document.styleSheets[0].cssRules.length);
+	document.styleSheets[0].insertRule(`._${decls[DECLS.indexOf("title-in-card-of-article")]} * { font-size: 20px; }`, document.styleSheets[0].cssRules.length);
+	document.styleSheets[0].insertRule(`._${decls[DECLS.indexOf("content-in-card-of-article")]} { font-size: 16px; }`, document.styleSheets[0].cssRules.length);
+	document.styleSheets[0].insertRule(`._${decls[DECLS.indexOf("link-in-card-of-article")]} { height: 36px; align-self: end; text-align: center; }`, document.styleSheets[0].cssRules.length);
+	document.styleSheets[0].insertRule(`._${decls[DECLS.indexOf("info-in-card-of-article")]} { height: 49px; justify-content: space-between; align-items: center; }`, document.styleSheets[0].cssRules.length);
 	document.styleSheets[0].insertRule(`#_${decls[DECLS.indexOf("wrapper")]}, #_${decls[DECLS.indexOf("header")]} { width:100%; flex-direction: column; align-items: center; }`, document.styleSheets[0].cssRules.length);
 	document.styleSheets[0].insertRule(`#_${decls[DECLS.indexOf("nav")]}, #_${decls[DECLS.indexOf("main")]} { width: 85%; }`, document.styleSheets[0].cssRules.length);
 	document.styleSheets[0].insertRule(`#_${decls[DECLS.indexOf("nav")]} { height: 54px; margin: 0 0 2px 0; justify-content: space-between; align-items: center; }`, document.styleSheets[0].cssRules.length);
 	document.styleSheets[0].insertRule(`#_${decls[DECLS.indexOf("top-image")]} { width: 85%; height: 0; padding-top: 17.73%; }`, document.styleSheets[0].cssRules.length);
 	document.styleSheets[0].insertRule(`#_${decls[DECLS.indexOf("logo")]} { width: 24px; height: 24px; }`, document.styleSheets[0].cssRules.length);
-	document.styleSheets[0].insertRule(`#_${decls[DECLS.indexOf("logo")]}::after { position: relative; top: -2px; left: 30px; content: "Tremo"; font-size: 20px; font-weight: 600; filter: grayscale(1); }`, document.styleSheets[0].cssRules.length);
+	document.styleSheets[0].insertRule(`#_${decls[DECLS.indexOf("logo")]}::after { position: relative; top: -4px; left: 30px; content: "Tremo"; font-size: 20px; font-weight: 600; filter: grayscale(1); }`, document.styleSheets[0].cssRules.length);
 	document.styleSheets[0].insertRule(`#_${decls[DECLS.indexOf("caller-of-menuFlyOut-of-config")]} { width: 40px; height: 36px; }`, document.styleSheets[0].cssRules.length);
 	document.styleSheets[0].insertRule(`#_${decls[DECLS.indexOf("calling-of-menuFlyOut-of-config")]} { top: 42px; right: 7.5%; width: 298px; }`, document.styleSheets[0].cssRules.length);
 	document.styleSheets[0].insertRule(`#_${decls[DECLS.indexOf("theme-changeTo-auto")]}::before { content: "Auto"; }`, document.styleSheets[0].cssRules.length);
@@ -288,7 +301,7 @@ function main() {
 	document.styleSheets[0].insertRule(`#_${decls[DECLS.indexOf("theme-changeTo-night")]}::before { content: "Night"; }`, document.styleSheets[0].cssRules.length);
 	document.styleSheets[0].insertRule(`#_${decls[DECLS.indexOf("theme-switcher-contrast")]}::before { content: "Contrast"; }`, document.styleSheets[0].cssRules.length);
 	document.styleSheets[0].insertRule(`#_${decls[DECLS.indexOf("theme-switcher-contrast")]}::after { content: "Coming soon..."; }`, document.styleSheets[0].cssRules.length);
-	document.styleSheets[0].insertRule(`#_${decls[DECLS.indexOf("main")]} { height: 2000px; padding: 25px 7.5%; justify-content: space-around; }`, document.styleSheets[0].cssRules.length);
+	document.styleSheets[0].insertRule(`#_${decls[DECLS.indexOf("main")]} { height: 2000px; padding: 21px 7.5%; justify-content: space-between; }`, document.styleSheets[0].cssRules.length);
 	document.styleSheets[0].insertRule(`#_${decls[DECLS.indexOf("main")]} > div { flex-direction: column; }`, document.styleSheets[0].cssRules.length);
 	document.styleSheets[0].insertRule(`#_${decls[DECLS.indexOf("left-in-main")]}, #_${decls[DECLS.indexOf("right-in-main")]} { width: 24%; }`, document.styleSheets[0].cssRules.length);
 	document.styleSheets[0].insertRule(`#_${decls[DECLS.indexOf("center-in-main")]} { width: 48%; }`, document.styleSheets[0].cssRules.length);
@@ -308,26 +321,26 @@ function main() {
 					<div id="_${decls[DECLS.indexOf("brand")]}">
 						<div id="_${decls[DECLS.indexOf("logo")]}"></div>
 					</div>
-					<div id="_${decls[DECLS.indexOf("caller-of-menuFlyOut-of-config")]}" class="_${decls[DECLS.indexOf("interaction-caller")]} _${decls[DECLS.indexOf("button")]}">
+					<div id="_${decls[DECLS.indexOf("caller-of-menuFlyOut-of-config")]}" class="_${decls[DECLS.indexOf("interaction-caller")]} _${decls[DECLS.indexOf("hyperlinkButton")]}">
 						<canvas width="40px" height="36px" id="_${decls[DECLS.indexOf("favicon-of-caller-of-menuFlyOut-of-config")]}" class="_${decls[DECLS.indexOf("favicon-in-button")]}"></canvas>
 						<div id="_${decls[DECLS.indexOf("calling-of-menuFlyOut-of-config")]}" class="_${decls[DECLS.indexOf("interaction-calling")]} _${decls[DECLS.indexOf("acrylic")]}">
 							<div id="_${decls[DECLS.indexOf("menuFlyOut-of-config")]}" class="_${decls[DECLS.indexOf("menuFlyOut")]}">
 								<div class="_${decls[DECLS.indexOf("group-in-menuFlyOut")]}">
-									<div id="_${decls[DECLS.indexOf("theme-changeTo-auto")]}" class="_${decls[DECLS.indexOf("theme-changeTo")]} _${decls[DECLS.indexOf("radioButton")]} _${decls[DECLS.indexOf("wrappingButton")]} _${decls[DECLS.indexOf("button")]}">
+									<div id="_${decls[DECLS.indexOf("theme-changeTo-auto")]}" class="_${decls[DECLS.indexOf("theme-changeTo")]} _${decls[DECLS.indexOf("radioButton")]} _${decls[DECLS.indexOf("wrappingButton")]}">
 										<canvas width="40px" height="36px" id="_${decls[DECLS.indexOf("favicon-of-theme-changeTo-auto")]}" class="_${decls[DECLS.indexOf("favicon-of-theme-changeTo")]} _${decls[DECLS.indexOf("favicon-in-button")]}"></canvas>
 									</div>
-									<div id="_${decls[DECLS.indexOf("theme-changeTo-light")]}" class="_${decls[DECLS.indexOf("theme-changeTo")]} _${decls[DECLS.indexOf("radioButton")]} _${decls[DECLS.indexOf("wrappingButton")]} _${decls[DECLS.indexOf("button")]}">
+									<div id="_${decls[DECLS.indexOf("theme-changeTo-light")]}" class="_${decls[DECLS.indexOf("theme-changeTo")]} _${decls[DECLS.indexOf("radioButton")]} _${decls[DECLS.indexOf("wrappingButton")]}">
 										<canvas width="40px" height="36px" id="_${decls[DECLS.indexOf("favicon-of-theme-changeTo-light")]}" class="_${decls[DECLS.indexOf("favicon-of-theme-changeTo")]} _${decls[DECLS.indexOf("favicon-in-button")]}"></canvas>
 									</div>
-									<div id="_${decls[DECLS.indexOf("theme-changeTo-dark")]}" class="_${decls[DECLS.indexOf("theme-changeTo")]} _${decls[DECLS.indexOf("radioButton")]} _${decls[DECLS.indexOf("wrappingButton")]} _${decls[DECLS.indexOf("button")]}">
+									<div id="_${decls[DECLS.indexOf("theme-changeTo-dark")]}" class="_${decls[DECLS.indexOf("theme-changeTo")]} _${decls[DECLS.indexOf("radioButton")]} _${decls[DECLS.indexOf("wrappingButton")]}">
 										<canvas width="40px" height="36px" id="_${decls[DECLS.indexOf("favicon-of-theme-changeTo-dark")]}" class="_${decls[DECLS.indexOf("favicon-of-theme-changeTo")]} _${decls[DECLS.indexOf("favicon-in-button")]}"></canvas>
 									</div>
-									<div id="_${decls[DECLS.indexOf("theme-changeTo-night")]}" class="_${decls[DECLS.indexOf("theme-changeTo")]} _${decls[DECLS.indexOf("radioButton")]} _${decls[DECLS.indexOf("wrappingButton")]} _${decls[DECLS.indexOf("button")]}">
+									<div id="_${decls[DECLS.indexOf("theme-changeTo-night")]}" class="_${decls[DECLS.indexOf("theme-changeTo")]} _${decls[DECLS.indexOf("radioButton")]} _${decls[DECLS.indexOf("wrappingButton")]}">
 										<canvas width="40px" height="36px" id="_${decls[DECLS.indexOf("favicon-of-theme-changeTo-night")]}" class="_${decls[DECLS.indexOf("favicon-of-theme-changeTo")]} _${decls[DECLS.indexOf("favicon-in-button")]}"></canvas>
 									</div>
 								</div>
 								<div class="_${decls[DECLS.indexOf("group-in-menuFlyOut")]}">
-									<div id="_${decls[DECLS.indexOf("theme-switcher-contrast")]}" class="_${decls[DECLS.indexOf("theme-switcher")]} _${decls[DECLS.indexOf("switcherButton")]} _${decls[DECLS.indexOf("wrappingButton")]} _${decls[DECLS.indexOf("button")]}">
+									<div id="_${decls[DECLS.indexOf("theme-switcher-contrast")]}" class="_${decls[DECLS.indexOf("theme-switcher")]} _${decls[DECLS.indexOf("switcherButton")]} _${decls[DECLS.indexOf("wrappingButton")]}">
 										<canvas width="40px" height="36px" id="_${decls[DECLS.indexOf("favicon-of-theme-switcher-contrast")]}" class="_${decls[DECLS.indexOf("favicon-of-theme-switcher")]} _${decls[DECLS.indexOf("favicon-in-button")]}"></canvas>
 									</div>
 								</div>
