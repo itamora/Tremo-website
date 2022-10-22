@@ -15,13 +15,16 @@
 html {
 	height: 100%;
 }
-body, div, span, canvas {
+body, div, span, svg, canvas {
 	display: -webkit-flex;
 	display: flex;
 }
 a:hover {
 	text-decoration: underline;
 	cursor: pointer;
+}
+svg {
+	overflow: initial;
 }
 audio, video:focus {
 	outline: medium;
